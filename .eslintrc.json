@@ -14,9 +14,28 @@
     "plugins": [
         "@typescript-eslint"
     ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx", ".js", ".jsx"],
+                "moduleDirectory": ["node_modules", "src/"]
+            } 
+        }
+    },
     "rules": {
         "linebreak-style": ["error", "windows"],
         "no-undef": "off",
-        "no-self-compare": "off"
+        "no-self-compare": "off",
+        "class-methods-use-this": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
     }
 }
