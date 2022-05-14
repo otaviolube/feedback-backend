@@ -1,5 +1,11 @@
 import express, { Express, Request, Response } from 'express';
 
+import { config } from 'dotenv';
+
+config({
+  path: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env',
+});
+
 class App {
   public express: Express;
 

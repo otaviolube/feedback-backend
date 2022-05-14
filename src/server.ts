@@ -1,4 +1,4 @@
 import { debug } from 'debug';
 import App from './app';
 
-App.listen(3000, () => debug('Servidor rodando perfeitamente ...'));
+App.listen(process.env.APP_PORT || 3000, () => debug('Servidor rodando perfeitamente ...'));
