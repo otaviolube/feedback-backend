@@ -1,6 +1,7 @@
 import express, { Express, Request, Response } from 'express';
 
 import { config } from 'dotenv';
+import initializeDB from './database';
 
 config({
   path: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env',
@@ -18,7 +19,7 @@ class App {
   }
 
   database(): void {
-
+    initializeDB();
   }
 
   middlewares(): void {
