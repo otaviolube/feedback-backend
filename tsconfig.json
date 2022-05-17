@@ -12,6 +12,11 @@
       "esModuleInterop":true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "sourceMap": true
+      "sourceMap": true,
+      "baseUrl": ".",
+      "paths": {
+         "@controllers/*": ["./src/app/controllers/*"],
+         "@models/*": ["./src/app/models/*"]
+      }
    }
 }
