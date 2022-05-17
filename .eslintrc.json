@@ -19,7 +19,7 @@
             "node": {
                 "extensions": [".ts", ".tsx", ".js", ".jsx"],
                 "moduleDirectory": ["node_modules", "src/"]
-            } 
+            }
         }
     },
     "rules": {
@@ -27,6 +27,7 @@
         "no-undef": "off",
         "no-self-compare": "off",
         "class-methods-use-this": "off",
+        "no-console": "error",
         "import/extensions": [
             "error",
             "ignorePackages",
