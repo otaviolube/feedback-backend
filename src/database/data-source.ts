@@ -1,6 +1,11 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
-import UserModel from '../app/models/UserModel';
+import FeedbackModel from '../app/models/FeedbackModel';
+import SessoesModel from '../app/models/SessoesModel';
+import ColaboradoresModel from '../app/models/ColaboradoresModel';
+import FuncaoModel from '../app/models/FuncaoModel';
+import AreaModel from '../app/models/AreaModel';
+import EmpresaModel from '../app/models/EmpresasModel';
 
 export default new DataSource({
   type: 'postgres',
@@ -11,7 +16,14 @@ export default new DataSource({
   database: 'postgres',
   synchronize: true,
   logging: false,
-  entities: [UserModel],
+  entities: [
+    ColaboradoresModel,
+    SessoesModel,
+    FuncaoModel,
+    FeedbackModel,
+    AreaModel,
+    EmpresaModel,
+  ],
   migrations: [],
   subscribers: [],
 });

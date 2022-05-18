@@ -37,6 +37,7 @@ class App {
       log(req.query, `request em: ${new Date().toISOString()}`);
       next();
     });
+
     this.express.get('/', (req: Request, res:Response) => res.end('teste'));
   }
 }
