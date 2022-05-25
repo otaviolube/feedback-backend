@@ -9,7 +9,6 @@
       "prepare": "husky install",
       "predev": "docker-compose -f ./.infra/docker-compose.yml up -d",
       "dev": "SET DEBUG=feedback-api:*&&SET NODE_ENV=dev&&npx nodemon ./src/server.ts",
-      "postdev": "echo 'postdev'",
       "start": "ts-node src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs"
    },

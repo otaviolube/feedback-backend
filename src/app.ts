@@ -5,7 +5,10 @@ import express, {
 } from 'express';
 
 import { config } from 'dotenv';
+import ColaboradoresRouter from './app/routes/ColaboradoresRoutes';
 import initializeDB from './database';
+import EmpresasRouter from './app/routes/EmpresaRoutes';
+import AreasRouter from './app/routes/AreaRoutes';
 
 const log = debug('feedback-api:app');
 
@@ -24,21 +27,22 @@ class App {
     this.routes();
   }
 
-  database(): void {
-    initializeDB();
+  public async database() {
+    await initializeDB();
   }
 
-  middlewares(): void {
-
-  }
-
-  routes(): void {
+  public middlewares() {
+    this.express.use(express.json());
     this.express.use((req:Request, res: Response, next:NextFunction) => {
       log(req.query, `request em: ${new Date().toISOString()}`);
       next();
     });
+  }
 
-    this.express.get('/', (req: Request, res:Response) => res.end('teste'));
+  public routes() {
+    this.express.use('/colaboradores', ColaboradoresRouter);
+    this.express.use('/empresas', EmpresasRouter);
+    this.express.use('/areas', AreasRouter);
   }
 }
 

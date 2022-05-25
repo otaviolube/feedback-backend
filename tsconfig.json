@@ -13,9 +13,5 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "sourceMap": true,
-      "baseUrl": "src",
-      "paths": {
-         "@controllers/*": ["./src/app/controllers/*"],
-      }
    }
 }

@@ -4,7 +4,7 @@ import FeedbackModel from '../app/models/FeedbackModel';
 import SessoesModel from '../app/models/SessoesModel';
 import ColaboradoresModel from '../app/models/ColaboradoresModel';
 import FuncaoModel from '../app/models/FuncaoModel';
-import AreaModel from '../app/models/AreaModel';
+import AreasModel from '../app/models/AreasModel';
 import EmpresaModel from '../app/models/EmpresasModel';
 
 export default new DataSource({
@@ -21,7 +21,7 @@ export default new DataSource({
     SessoesModel,
     FuncaoModel,
     FeedbackModel,
-    AreaModel,
+    AreasModel,
     EmpresaModel,
   ],
   migrations: [],

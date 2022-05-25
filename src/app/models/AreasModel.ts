@@ -8,14 +8,17 @@ import EmpresaModel from './EmpresasModel';
 @Entity()
 
 export default class AreaModel {
-  @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn()
+      id: number;
 
     @Column()
       nome: string;
 
     @Column()
       descricao: string;
+
+    @Column()
+      coisaqualquer: string;
 
     @OneToMany(() => ColaboradoresModel, (colaborador) => colaborador.area)
       colaboradores: ColaboradoresModel[];

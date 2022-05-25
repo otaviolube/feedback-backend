@@ -5,7 +5,7 @@ import {
 import SessoesModel from './SessoesModel';
 import FeedbackModel from './FeedbackModel';
 import FuncaoModel from './FuncaoModel';
-import AreaModel from './AreaModel';
+import AreasModel from './AreasModel';
 
 @Entity()
 
@@ -31,6 +31,6 @@ export default class ColaboradoresModel {
     @ManyToOne(() => FuncaoModel, (funcao) => funcao.colaboradores)
       funcao: FuncaoModel;
 
-    @ManyToOne(() => AreaModel, (area) => area.colaboradores)
-      area: AreaModel;
+    @ManyToOne(() => AreasModel, (area) => area.colaboradores)
+      area: AreasModel;
 }

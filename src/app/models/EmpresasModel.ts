@@ -2,7 +2,7 @@ import {
   Entity, PrimaryGeneratedColumn, Column, OneToMany,
 } from 'typeorm';
 
-import AreaModel from './AreaModel';
+import AreaModel from './AreasModel';
 
 @Entity()
 
