@@ -9,6 +9,7 @@ import ColaboradoresRouter from './app/routes/ColaboradoresRoutes';
 import initializeDB from './database';
 import EmpresasRouter from './app/routes/EmpresaRoutes';
 import AreasRouter from './app/routes/AreaRoutes';
+import FuncoesRouter from './app/routes/FuncaoRoutes';
 
 const log = debug('feedback-api:app');
 
@@ -43,6 +44,7 @@ class App {
     this.express.use('/colaboradores', ColaboradoresRouter);
     this.express.use('/empresas', EmpresasRouter);
     this.express.use('/areas', AreasRouter);
+    this.express.use('/funcoes', FuncoesRouter);
   }
 }
 

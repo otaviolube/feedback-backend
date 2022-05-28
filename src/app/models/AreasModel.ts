@@ -17,9 +17,6 @@ export default class AreaModel {
     @Column()
       descricao: string;
 
-    @Column()
-      coisaqualquer: string;
-
     @OneToMany(() => ColaboradoresModel, (colaborador) => colaborador.area)
       colaboradores: ColaboradoresModel[];
 

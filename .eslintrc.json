@@ -27,7 +27,7 @@
         "no-undef": "off",
         "no-self-compare": "off",
         "class-methods-use-this": "off",
-        "no-console": "error",
+        "no-console": "warn",
         "import/extensions": [
             "error",
             "ignorePackages",

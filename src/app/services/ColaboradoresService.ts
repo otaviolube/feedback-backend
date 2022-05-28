@@ -10,7 +10,12 @@ export default class ColaboradoresService {
   }
 
   public index = async () => {
-    const colaboradores = await this.colaboradoresRepository.find();
+    const colaboradores = await this.colaboradoresRepository.find({
+      relations: {
+        funcao: true,
+        area: true,
+      },
+    });
     return colaboradores;
   };
 

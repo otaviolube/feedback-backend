@@ -15,7 +15,8 @@ export default class ColaboradoresController {
   };
 
   public create = async (req: Request, res: Response) => {
-    const colaborador = req.body.colaborador as ColaboradoresModel;
+    const colaborador = req.body as ColaboradoresModel;
+    console.log(colaborador);
     const novoColaborador = await this.colaboradorService.create(colaborador);
     res.send(novoColaborador).json();
   };
