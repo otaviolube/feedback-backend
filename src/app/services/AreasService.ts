@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm';
-import AreasModel from '../models/AreasModel';
 import AppDataSource from '../../database/data-source';
+import AreasModel from '../models/AreasModel';
 
 export default class AreasService {
   private areasRespository: Repository<AreasModel>;
@@ -10,7 +10,11 @@ export default class AreasService {
   }
 
   public index = async () => {
-    const areas = await this.areasRespository.find();
+    const areas = await this.areasRespository.find({
+      relations: {
+        empresa: true,
+      },
+    });
     return areas;
   };
 

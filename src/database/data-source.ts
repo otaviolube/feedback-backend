@@ -8,12 +8,8 @@ import AreasModel from '../app/models/AreasModel';
 import EmpresaModel from '../app/models/EmpresasModel';
 
 export default new DataSource({
-  type: 'postgres',
-  host: 'localhost',
-  port: 5432,
-  username: 'dev',
-  password: 'dev',
-  database: 'postgres',
+  type: 'sqlite',
+  database: './src/database/database.db',
   synchronize: true,
   logging: false,
   entities: [
